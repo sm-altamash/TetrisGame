@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				quicksand: ['Quicksand', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -68,6 +72,9 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+      boxShadow: {
+        'tetris-block': '0 1px 8px 2px rgba(142, 132, 240, 0.16), 0 0.5px 1.5px 0 rgba(142, 132, 240, 0.14)'
+      },
 			keyframes: {
 				'accordion-down': {
 					from: {
@@ -84,11 +91,23 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'row-clear': {
+          '0%': { opacity: '1' },
+          '50%': { opacity: '0.3' },
+          '100%': { opacity: '1' },
+        },
+        'soft-float': {
+          '0%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+          '100%': { transform: 'translateY(0)' },
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'row-clear': 'row-clear 0.6s',
+        'soft-float': 'soft-float 2s infinite',
 			}
 		}
 	},

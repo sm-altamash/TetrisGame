@@ -1,11 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+// Modern Tetris glow landing
+
+import React from "react";
+import TetrisGame from "@/components/TetrisGame";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div
+      className="min-h-screen flex items-center justify-center w-full"
+      style={{
+        background: "linear-gradient(102.3deg, #e5deff 8%, #D6BCFA 92%, #fdfcfb 100%)",
+      }}
+    >
+      <div className="max-w-3xl w-full flex flex-col items-center">
+        <TetrisGame />
       </div>
     </div>
   );
